@@ -19,7 +19,7 @@ class HelloState extends React.Component<Props, State> {
     onDecrement = () => this.updateEnthusiasm(this.state.currentEnthusiasm - 1);
 
     render() {
-        const {name } = this.props;
+        const { name } = this.props;
 
         if (this.state.currentEnthusiasm <0 ) {
             throw new Error('Add some enthusiasm!');
