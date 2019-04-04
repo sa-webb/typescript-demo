@@ -3,6 +3,8 @@ import '../containers/Hello.css';
 export interface Props {
     name: string;
     enthusiamLevel?: number;
+    onIncrement?: () => void;
+    onDecrement?: () => void;
 }
 
 function Hello({name, enthusiamLevel =1 }: Props) {
@@ -12,11 +14,15 @@ function Hello({name, enthusiamLevel =1 }: Props) {
 
     return (
         <div className="hello">
-        <div className="greeting">
-        Hello {name + getExclamationMarks(enthusiamLevel)}
+          <div className="greeting">
+            Hello {name + getExclamationMarks(enthusiasmLevel)}
+          </div>
+          <div>
+            <button onClick={onDecrement}>-</button>
+            <button onClick={onIncrement}>+</button>
+          </div>
         </div>
-        </div>
-    )
+      );
 }
 
 export default Hello;
