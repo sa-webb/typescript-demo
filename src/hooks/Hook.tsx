@@ -1,7 +1,6 @@
 import * as React from 'react';
-import { render } from 'enzyme';
 
-const FunctionComponent: React.FC = () => {
+export const FunctionComponent: React.FC = () => {
     const [count, setCount] = React.useState(0);
 
 return (
